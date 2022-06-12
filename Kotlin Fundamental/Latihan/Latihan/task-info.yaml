@@ -1,0 +1,57 @@
+type: output
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 356
+    length: 47
+    placeholder_text: val result = 0
+    initial_state:
+      length: 14
+      offset: 353
+    initialized_from_dependency: false
+    possible_answer: 'val result = valueA + (valueB - (valueC ?: 100))'
+    selected: true
+    status: Solved
+  - offset: 483
+    length: 11
+    placeholder_text: ': Int = 0'
+    initial_state:
+      length: 9
+      offset: 447
+    initialized_from_dependency: false
+    possible_answer: = result
+    selected: false
+    status: Solved
+  text: |-
+    fun main() {
+        val valueA = 65
+        val valueB = 52
+        val valueC = 78
+
+        val resultA = calculate(valueA, valueB, valueC)
+        val resultB = calculate(valueA, valueB, null)
+
+        println("""
+            ResultA is $resultA
+            ResultB is $resultB
+        """.trimIndent())
+    }
+
+    fun calculate(valueA: Int, valueB: Int, valueC: Int?): Int {
+        // TODO 1
+        val result = 0
+        return generateResult(result)
+    }
+
+    // TODO 2
+    fun generateResult(result: Int) : Int = 0
+  learner_created: false
+- name: test/output.txt
+  visible: false
+  text: |-
+    ResultA is 39
+    ResultB is 17
+  learner_created: false
+status: Solved
+record: -1

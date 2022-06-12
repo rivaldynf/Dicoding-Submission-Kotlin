@@ -1,0 +1,80 @@
+type: output
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 52
+    length: 26
+    placeholder_text: 'var sleep: Boolean'
+    initial_state:
+      length: 18
+      offset: 52
+    initialized_from_dependency: false
+    possible_answer: |-
+      var sleep: Boolean = false
+              get() {
+                  println("Fungsi getter dipanggil")
+                  return field
+              }
+              set(value) {
+                  println("Fungsi setter dipanggil")
+                  field = value
+              }
+    selected: true
+    status: Solved
+  - offset: 280
+    length: 69
+    placeholder_text: print()
+    initial_state:
+      length: 7
+      offset: 100
+    initialized_from_dependency: false
+    possible_answer: |-
+      if (sleep) {
+                  print("$name, sleep!")
+              } else {
+                  print("$name, let's play!\n")
+              }
+    selected: true
+    status: Solved
+  - offset: 391
+    length: 26
+    placeholder_text: val gippy = Cat
+    initial_state:
+      length: 15
+      offset: 149
+    initialized_from_dependency: false
+    possible_answer: val gippy = Cat("Gippy")
+    selected: false
+    status: Solved
+  text: |-
+    // TODO 1
+    class Cat(private val name: String) {
+        var sleep: Boolean
+
+        fun toSleep() {
+            print()
+        }
+    }
+
+    fun main() {
+
+        // TODO 2
+        val gippy = Cat
+
+        gippy.toSleep()
+        gippy.sleep = true
+        gippy.toSleep()
+    }
+  learner_created: false
+- name: test/output.txt
+  visible: false
+  text: |-
+    Fungsi getter dipanggil
+    Gippy, let's play!
+    Fungsi setter dipanggil
+    Fungsi getter dipanggil
+    Gippy, sleep!
+  learner_created: false
+status: Solved
+record: -1

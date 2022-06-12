@@ -1,0 +1,52 @@
+type: output
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 141
+    length: 69
+    placeholder_text: println()
+    initial_state:
+      length: 9
+      offset: 141
+    initialized_from_dependency: false
+    possible_answer: println("First letter is $firstChar and $lastChar for second
+      letter")
+    selected: true
+    status: Solved
+  - offset: 225
+    length: 120
+    placeholder_text: fun String.getFirstAndLast() = mapOf<String, String>()
+    initial_state:
+      length: 54
+      offset: 165
+    initialized_from_dependency: false
+    possible_answer: |-
+      fun String.getFirstAndLast() = mapOf(
+              "first" to first(),
+              "last" to last()
+      )
+    selected: true
+    status: Solved
+  text: |-
+    fun main() {
+        val text = "Kotlin".getFirstAndLast()
+
+        val firstChar = text["first"]
+        val lastChar = text["last"]
+
+        // TODO 2
+        println()
+
+    }
+
+    // TODO 1
+    fun String.getFirstAndLast() = mapOf<String, String>()
+  learner_created: false
+- name: test/output.txt
+  visible: false
+  text: |
+    First letter is K and n for second letter
+  learner_created: false
+status: Solved
+record: -1
